@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="style.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <main>
+  <h1>ENCRIPTADOR</h1> 
+  <div class="col-xs-8 col-xs-push-2">
+  <textarea class="form-control" id="textoingresado" name="text"  placeholder="Ingrese su texto aqui...">
+    
+  </textarea>
+  
+  <button id="btn-encripatar" class="btn btn-primary btn-lg btn-light" name="submit" type="submit" onclick="getText()">Encriptar</button>
+ 
+  <button id="btn-desencriptar" class="btn btn-secondary btn-lg btn-light" name="submit" type="submit" onclick="setText()">Desencriptar</button>
+
+ 
+</div>
+<div class="col-xs-8 col-xs-push-2">
+  <textarea class="form-control" id="textoencriptado" name="text"  placeholder="Todavía no ingresó ningún texto..."> </textarea>
+</div>
+</main>
+
+<footer>
+    <p>info personal Noelia Valle</p>
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
