@@ -1,23 +1,5 @@
 function getText() {
-
   let texto = document.getElementById("textoingresado").value;
-
-  /* Se resuelve en la siguiente linea texto
-//busco vocales
-
-let vocales = /[aeiou]/g;
-
-//muestro en consola las vocales encontradas
-console.log (texto.match (vocales));
-
-
-let coincidencias = texto.match (vocales);
-
-console.log (coincidencias);
-
-//Map de vocales
-*/
-
   const reemplazos = {
     "a": "ai",
     "e": "enter",
@@ -28,11 +10,10 @@ console.log (coincidencias);
 
   let textoEncrip = texto.replace(/[aeiou]/g, matched => reemplazos[matched]);
 
-  console.log(textoEncrip);
+  console.log("encriptando:", textoEncrip);
 
   document.getElementById("textoencriptado").innerHTML = textoEncrip;
 
- 
 }
 
 function setText() {
@@ -49,13 +30,22 @@ function setText() {
 
   let textoDesEncrip = texto.replace(/ai|enter|imes|ober|ufat/g, matched => reemplazos[matched]);
 
-  console.log(textoDesEncrip);
+  console.log("desencriptando:", textoDesEncrip);
 
   document.getElementById("textoencriptado").innerHTML = textoDesEncrip;
 
-
-
 }
+
+//call the writeText() function to copy the text into the clipboard
+function copyToClipBoard() {
+
+  let text = document.getElementById("textoencriptado").value;
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      console.log('Texto copiado en clipboard');
+    });
+}
+
 
 
 

@@ -11,6 +11,7 @@
 </head>
 <body>
     <main>
+      <div class="container">
   <h1>ENCRIPTADOR</h1> 
   <div class="col-xs-8 col-xs-push-2">
   <textarea class="form-control" id="textoingresado" name="text"  placeholder="Ingrese su texto aqui...">
@@ -26,11 +27,14 @@
 <div class="col-xs-8 col-xs-push-2">
   <textarea class="form-control" id="textoencriptado" name="text"  placeholder="Todavía no ingresó ningún texto..."> </textarea>
 </div>
+<button id="btn-copiar" class="btn btn-secondary btn-lg btn-light" name="submit" type="submit" onclick="copyToClipBoard()">Copiar</button>
 </main>
-
 <footer>
-    <p>info personal Noelia Valle</p>
+  <p>info personal Noelia Valle</p>
 </footer>
+</div>
+
+
 
 <script src="./script.js"></script>
 
