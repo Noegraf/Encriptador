@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="style.css" media="screen and (max-width: 600px)">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" src="style.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
+
 <body>
-    <main>
-      <div class="container">
-  <h1>ENCRIPTADOR</h1> 
-  <div class="col-xs-8 col-xs-push-2">
-  <textarea class="form-control" id="textoingresado" name="text"  placeholder="Ingrese su texto aqui...">
-    
-  </textarea>
-  
-  <button id="btn-encripatar" class="btn btn-primary btn-lg btn-light" name="submit" type="submit" onclick="getText()">Encriptar</button>
- 
-  <button id="btn-desencriptar" class="btn btn-secondary btn-lg btn-light" name="submit" type="submit" onclick="setText()">Desencriptar</button>
 
- 
-</div>
-<div class="col-xs-8 col-xs-push-2">
-  <textarea class="form-control" id="textoencriptado" name="text"  placeholder="Todavía no ingresó ningún texto..."> </textarea>
-</div>
-<button id="btn-copiar" class="btn btn-secondary btn-lg btn-light" name="submit" type="submit" onclick="copyToClipBoard()">Copiar</button>
-</main>
-<footer class="col-xs-8 col-xs-push-2">
-  <p>info personal Noelia Valle</p>
-</footer>
-</div>
+  <div class="container-fluid p-5">
+    <h4 class="card-header text-center p-2">ENCRIPTADOR</h4>
+    <div class="row p-2">
+      <div class="col col-12 ">
+        <div class="col-8 float-left p-2">
+          <textarea class="form-control  p-1" id="textoingresado" name="text"
+            placeholder="Ingrese su texto aqui..."></textarea>
+          <div class="row justify-content-center" id="botones">
+            <div class="btn">
+              <button id="btn-encripatar" class="btn btn-primary btn-sm btn-light" name="submit" type="submit"
+                onclick="getText()">Encriptar</button>
+            </div>
+            <div class="btn">
+              <button id="btn-desencriptar" class="btn btn-secondary btn-sm btn-light" name="submit" type="submit"
+                onclick="setText()">Desencriptar</button>
+            </div>
+          </div>
+        </div>
 
+        <div class="col row justify-content-center col-4 float-right p-2">
+          
+          <img class="card-img-top" src="./images-figma/Rectangle 1.svg" alt="Card image">
+          <div class="card-img-overlay p-5">
+            <img class="card-img p-1 " src="./images-figma/Muñeco.svg" alt="Card image">
+            <h4 class="card-title text-center p-1">Ningún mensaje fue encontrado</h4>
+            <p class="card-text text-center p-1">Ingrese su texto para encriptar o desencriptar</p>
+            <textarea class="form-control p-1" id="textoencriptado" name="text"
+            placeholder="Todavía no ingresó ningún texto..."> </textarea>
+            <div class="row justify-content-center p-2">
+              <button id="btn-copiar" class="btn btn-secondary btn-sm btn-light" name="submit" type="submit"
+                onclick="copyToClipBoard()">Copiar</button>
+            </div>
+          </div>
+         
+          
+        </div>
+      </div>
+    </div>
 
+    <div>
+      <footer class="col card-footer">
+        <p class="text-center">Noelia Valle</p>
+      </footer>
+    </div>
 
-<script src="./script.js"></script>
+  </div>
+
+  <script src="./script.js"></script>
 
 </body>
+
 </html>
