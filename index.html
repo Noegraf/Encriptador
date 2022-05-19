@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" src="style.css" media="screen and (max-width: 600px)">
+  <link rel="stylesheet" src="styles.css" media="screen and (max-width: 600px)">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -14,55 +14,111 @@
 
 <body>
 
-  <div class="container-fluid p-5">
-    <h4 class="card-header text-center p-2">ENCRIPTADOR</h4>
-    <div class="row p-2">
-      <div class="col col-12 ">
-        <div class="col-8 float-left p-2">
-          <textarea class="form-control  p-1" id="textoingresado" name="text"
-            placeholder="Ingrese su texto aqui..."></textarea>
-          <div class="row justify-content-center" id="botones">
-            <div class="btn">
-              <button id="btn-encripatar" class="btn btn-primary btn-sm btn-light" name="submit" type="submit"
+  <header class="card-header  bg-dark">
+    <h4 class="text-center text-white">ENCRIPTADOR</h4>
+  </header>
+
+  <section class="container-fluid ">
+
+    <div class="row p-2 ">
+      <div class="col-sm-7">
+        <div class="card border-0" >
+          <div class="card-body " >
+            <textarea class="form-control" style="height: 29rem;"  id="textoingresado" name="text"
+              placeholder="Ingrese su texto aqui..."></textarea>
+            <div class="botones p-2">
+              <button id="btn-encripatar" class="btn btn-primary btn-sm p-1" name="submit" type="submit"
                 onclick="getText()">Encriptar</button>
-            </div>
-            <div class="btn">
-              <button id="btn-desencriptar" class="btn btn-secondary btn-sm btn-light" name="submit" type="submit"
+              <button id="btn-desencriptar" class="btn btn-primary btn-sm p-1" name="submit" type="submit"
                 onclick="setText()">Desencriptar</button>
             </div>
           </div>
-        </div>
 
-        <div class="col row justify-content-center col-4 float-right p-2">
-          
-          <img class="card-img-top" src="./images-figma/Rectangle 1.svg" alt="Card image">
-          <div class="card-img-overlay p-5">
-            <img class="card-img p-1 " src="./images-figma/Muñeco.svg" alt="Card image">
-            <h4 class="card-title text-center p-1">Ningún mensaje fue encontrado</h4>
-            <p class="card-text text-center p-1">Ingrese su texto para encriptar o desencriptar</p>
-            <textarea class="form-control p-1" id="textoencriptado" name="text"
-            placeholder="Todavía no ingresó ningún texto..."> </textarea>
-            <div class="row justify-content-center p-2">
-              <button id="btn-copiar" class="btn btn-secondary btn-sm btn-light" name="submit" type="submit"
-                onclick="copyToClipBoard()">Copiar</button>
-            </div>
-          </div>
-         
-          
         </div>
       </div>
-    </div>
 
-    <div>
-      <footer class="col card-footer">
-        <p class="text-center">Noelia Valle</p>
-      </footer>
-    </div>
+      <div class="col-sm-5" >
+        <div class="card border-0" style="max-width: 50rem;">
+          <div class="card-body" >
+            <div class="img-overlay  p-5"  id="el">
+              <img class="card-img " src="./images-figma/Muñeco.svg" alt="Card image">
+              <h4 class="card-title text-center p-1">Ningún mensaje fue encontrado</h4>
+              <p class="card-text text-center p-1">Ingrese su texto para encriptar o desencriptar</p>
+              <textarea class="form-control p-1" id="textoencriptado" name="text"
+                placeholder="Todavía no ingresó ningún texto..."> </textarea>
+              <div class="row justify-content-center p-2">
+                <button id="btn-copiar" class="btn btn-primary btn-sm p-1" name="submit" type="submit"
+                  onclick="copyToClipBoard()">Copiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </div>
+    </div>
+  </section>
+
+
+  <footer class="card-footer  bg-dark">
+    <p class="text-white">Noelia Valle</p>
+  </footer>
+
 
   <script src="./script.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+<!--
+
+
+      <div class="row p-4 justify-content-center " >
+        <div class=" col-md-6 justify-content-center float-left p-2 ">
+          <img class="card-img" src="./images-figma/Rectangle 1.svg" alt="Card image">
+          <div class="card-img-overlay p-5" >
+            <textarea class="form-control" id="textoingresado" name="text"
+            placeholder="Ingrese su texto aqui..."></textarea>
+          <div class="row justify-content-center" id="botones">
+            <div class="btn">
+              <button id="btn-encripatar" class="btn btn-primary btn-sm " name="submit" type="submit"
+                onclick="getText()">Encriptar</button>
+            </div>
+            <div class="btn">
+              <button id="btn-desencriptar" class="btn btn-primary btn-sm " name="submit" type="submit"
+                onclick="setText()">Desencriptar</button>
+            </div>
+          </div>
+
+          </div>
+         
+        </div>
+
+        <div class="col-md-6 justify-content-centerfloat-left p-2" >
+          <img class="card-img" src="./images-figma/Rectangle 1.svg" alt="Card image">
+          <div class="card-img-overlay p-5">
+            <img class="card-img" src="./images-figma/Muñeco.svg" alt="Card image">
+            <h4 class="card-title text-center p-1">Ningún mensaje fue encontrado</h4>
+            <p class="card-text text-center p-1">Ingrese su texto para encriptar o desencriptar</p>
+            <textarea class="form-control p-1" id="textoencriptado" name="text"
+            placeholder="Todavía no ingresó ningún texto..."> </textarea>
+            <div class="row justify-content-center p-2">
+              <button id="btn-copiar" class="btn btn-primary btn-sm " name="submit" type="submit"
+                onclick="copyToClipBoard()">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+      <footer class="card-footer">
+        <p class="text-center">Noelia Valle</p>
+      </footer>
+    
+-->

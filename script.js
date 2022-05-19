@@ -34,6 +34,7 @@ function setText() {
 
   document.getElementById("textoencriptado").innerHTML = textoDesEncrip;
 
+
 }
 
 //call the writeText() function to copy the text into the clipboard
@@ -45,7 +46,6 @@ function copyToClipBoard() {
       console.log('Texto copiado en clipboard');
     });
 }
-
 
 
 
